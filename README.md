@@ -30,12 +30,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./finished/screenshot.jpg)
+![](./finish/screenshot.jpeg)
 
 ### Links
-
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- See My Solution and Live Url
+- Solution URL: [My Solution here](https://www.frontendmentor.io/solutions/rock-paper-scissorhtml-cssscss-vanilla-javascript-D6z6HQ9UL)
+- Live Site URL: [Live Url](https://rock-paper-scissor-benjoquilario.vercel.app/)
 
 ## My process
 
@@ -46,7 +46,9 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - JavaScript
-- Mobile-first workflow
+- SCSS for CSS preprocessor 
+- Desktop-first workflow
+- Gulp for browsersync.
 
 **Note: These are just examples. Delete this note and replace the list above with your own choices**
 
@@ -80,15 +82,15 @@ function playerChange() {
           playerPick.setAttribute('data-type', `${userChoice}`);
           playerPick.setAttribute('data-choice', `${userChoice}`);
           playerPick.setAttribute('aria-label', `choose ${userChoice}`);
-        }
-        function housePickChange() {
+}
+function housePickChange() {
           setTimeout(() => {
             computerPick.innerHTML = chooseImg(`${computerChoice}`);
             computerPick.setAttribute('data-type', `${computerChoice}`);
             computerPick.setAttribute('data-choice', `${computerChoice}`);
             computerPick.setAttribute('aria-label', `choose ${computerChoice}`);
           }, timeOut);
-        }
+  }
 }
 ```
 
@@ -100,8 +102,8 @@ If you want more help with writing markdown, we'd recommend checking out [The Ma
 ## Author
 
 - Website - [Benjo Quilario](https://www.your-site.com)
-- Frontend Mentor - [@benjoquilario](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@benjoquilario](https://www.twitter.com/yourusername)
+- Frontend Mentor - [@benjoquilario](https://www.frontendmentor.io/profile/benjoquilario)
+- Twitter - [@iam_benjo](https://twitter.com/iam_benjo)
 
 **Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 
