@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="stylesheet" href="dist/style.css" />
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
+
+    <!-- Score Rules You Picked The House Picked You Win You Lose Play Again -->
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 12px;
+        text-align: center;
+        color: #fff;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <a href="#" class="header__logo">
+          <img src="./images/logo.svg" alt="logo of the website" />
+        </a>
+        <div class="header__score">
+          <span class="header__score--score">SCORE <b class="score">0</b></span>
+        </div>
+      </header>
+      <main>
+        <h1 class="sr-only">ROCK PAPER SCISSOR</h1>
+        <div class="container">
+          <div class="gameboard">
+            <div class="gameboard__game">
+              <button
+                id="paper"
+                data-toggle="choices"
+                data-type="paper"
+                data-choice="paper"
+                class="buttonPick btn gameboard__game--choices btn--paper"
+                aria-label="choose paper"
+              >
+                <img class="choices-icon" src="./images/icon-paper.svg" alt="paper" />
+              </button>
+              <button
+                id="scissor"
+                data-toggle="choices"
+                data-type="scissor"
+                data-choice="scissor"
+                class="buttonPick btn gameboard__game--choices btn--scissor"
+                aria-label="choose scissor"
+              >
+                <img
+                  class="choices-icon"
+                  src="./images/icon-scissors.svg"
+                  alt="scissor"
+                />
+              </button>
+              <button
+                id="rock"
+                data-toggle="choices"
+                data-type="rock"
+                data-choice="rock"
+                class="buttonPick btn gameboard__game--choices btn--rock"
+                aria-label="choose rock"
+              >
+                <img class="choices-icon" src="./images/icon-rock.svg" alt="rock" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
+      <div class="gameboard__result">
+        <div class="gameboard__result--yourchoice">
+          <h2 class="heading-result">YOU PICKED</h2>
+          <button
+            data-toggle="choices"
+            data-type="scissor"
+            class="playerChoice btn gameboard__game--choices"
+            aria-label="choose scissor"
+          ></button>
+        </div>
+        <div class="gameboard__result--text">
+          <h2 class="result-text">User WinS</h2>
+          <button class="btn btn--reset">Play Again</button>
+        </div>
+        <div class="gameboard__result--computer">
+          <h2 class="heading-result">THE HOUSE PICKED</h2>
+          <button
+            data-toggle="choices"
+            data-type="rock"
+            class="computerChoice btn gameboard__game--choices radial"
+            aria-label="choose rock"
+          ></button>
+        </div>
+      </div>
+      <div class="modal-container modal__overlay">
+        <div class="modal">
+          <div class="modal__top">
+            <h2 class="heading-rules">RULES</h2>
+            <button class="btn btn--modalClose" aria-label="modal close">
+              <img src="./images/icon-close.svg" alt="close" />
+            </button>
+          </div>
+          <div class="modal__image">
+            <img src="./images/image-rules.svg" alt="rules of the game" />
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="#">Benjo Quilario</a>.
+        </div>
+        <button class="btn btn--rules">RULES</button>
+      </footer>
+    </div>
+
+    <script src="./app/js/script.js"></script>
+  </body>
+</html>

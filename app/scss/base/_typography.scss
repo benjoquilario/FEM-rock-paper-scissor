@@ -1,0 +1,19 @@
+// @use '../abstracts/' as *;
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+.heading-result {
+  font-size: clamp(1.25rem, 4vw, 1.875rem);
+  color: $whiteColor;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.heading-rules {
+  font-size: rem(31);
+}

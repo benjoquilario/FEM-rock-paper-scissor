@@ -1,0 +1,111 @@
+//@use '../abstracts/' as *;
+
+@keyframes colorChange {
+  0% {
+    background-image: linear-gradient(to right, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+  }
+  50% {
+    background-image: linear-gradient(to right, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+  }
+  100% {
+    background-image: linear-gradient(to right, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+  }
+}
+
+@keyframes shadowmove {
+  0% {
+    -webkit-box-shadow: 0 0 0 76px transparent, 0 0 0 76px rgba(255, 255, 255, 0.1),
+      0 0 0 45px rgba(255, 255, 255, 0.1), 0 0 0 18px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 0 76px transparent, 0 0 0 76px rgba(255, 255, 255, 0.1),
+      0 0 0 45px rgba(255, 255, 255, 0.1), 0 0 0 18px rgba(255, 255, 255, 0.1);
+  }
+  1% {
+    -webkit-box-shadow: 0 0 0 0 transparent, 0 0 0 76px rgba(255, 255, 255, 0.1),
+      0 0 0 45px rgba(255, 255, 255, 0.1), 0 0 0 18px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 0 0 transparent, 0 0 0 76px rgba(255, 255, 255, 0.1),
+      0 0 0 45px rgba(255, 255, 255, 0.1), 0 0 0 18px rgba(255, 255, 255, 0.1);
+  }
+  24% {
+    -webkit-box-shadow: 0 0 0 18px rgba(255, 255, 255, 0.1), 0 0 0 76px transparent,
+      0 0 0 76px rgba(255, 255, 255, 0.1), 0 0 0 45px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 0 18px rgba(255, 255, 255, 0.1), 0 0 0 76px transparent,
+      0 0 0 76px rgba(255, 255, 255, 0.1), 0 0 0 45px rgba(255, 255, 255, 0.1);
+  }
+  25% {
+    -webkit-box-shadow: 0 0 0 18px rgba(255, 255, 255, 0.1), 0 0 0 0 transparent,
+      0 0 0 76px rgba(255, 255, 255, 0.1), 0 0 0 45px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 0 18px rgba(255, 255, 255, 0.1), 0 0 0 0 transparent,
+      0 0 0 76px rgba(255, 255, 255, 0.1), 0 0 0 45px rgba(255, 255, 255, 0.1);
+  }
+  74% {
+    -webkit-box-shadow: 0 0 0 45px rgba(255, 255, 255, 0.1),
+      0 0 0 18px rgba(255, 255, 255, 0.1), 0 0 0 76px transparent,
+      0 0 0 76px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 0 45px rgba(255, 255, 255, 0.1), 0 0 0 18px rgba(255, 255, 255, 0.1),
+      0 0 0 76px transparent, 0 0 0 76px rgba(255, 255, 255, 0.1);
+  }
+  75% {
+    -webkit-box-shadow: 0 0 0 45px rgba(255, 255, 255, 0.1),
+      0 0 0 18px rgba(255, 255, 255, 0.1), 0 0 0 0 transparent,
+      0 0 0 76px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 0 45px rgba(255, 255, 255, 0.1), 0 0 0 18px rgba(255, 255, 255, 0.1),
+      0 0 0 0 transparent, 0 0 0 76px rgba(255, 255, 255, 0.1);
+  }
+  99% {
+    -webkit-box-shadow: 0 0 0 76px rgba(255, 255, 255, 0.1),
+      0 0 0 45px rgba(255, 255, 255, 0.1), 0 0 0 18px rgba(255, 255, 255, 0.1),
+      0 0 0 76px transparent;
+    box-shadow: 0 0 0 76px rgba(255, 255, 255, 0.1), 0 0 0 45px rgba(255, 255, 255, 0.1),
+      0 0 0 18px rgba(255, 255, 255, 0.1), 0 0 0 76px transparent;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 76px rgba(255, 255, 255, 0.1),
+      0 0 0 45px rgba(255, 255, 255, 0.1), 0 0 0 18px rgba(255, 255, 255, 0.1),
+      0 0 0 0 transparent;
+    box-shadow: 0 0 0 76px rgba(255, 255, 255, 0.1), 0 0 0 45px rgba(255, 255, 255, 0.1),
+      0 0 0 18px rgba(255, 255, 255, 0.1), 0 0 0 0 transparent;
+  }
+}
+
+@keyframes opening {
+  0% {
+    opacity: 0;
+    transform: scale(0) rotate(60deg);
+  }
+  50% {
+    transform: scale(0.5) rotate(30deg);
+  }
+  100% {
+    transform: scale(1) rotate(0);
+  }
+}
+
+@keyframes waving {
+  0% {
+    opacity: 1;
+    transform: rotate(8deg);
+  }
+  25% {
+    transform: rotate(-8deg);
+  }
+  50% {
+    transform: rotate(8deg);
+  }
+  75% {
+    transform: rotate(-8deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes playAgain {
+  0% {
+    opacity: 0;
+    transform: scale(2.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(0);
+  }
+}

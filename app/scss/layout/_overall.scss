@@ -1,0 +1,165 @@
+// @use '../abstracts/' as *;
+
+.header {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: rem(17) rem(26);
+  border: rem(2) solid $headerOutline;
+  border-radius: rem(10);
+  margin-top: rem(50);
+  max-width: rem(700);
+  width: 100%;
+
+  @include breakpoint-down(medium) {
+    padding: rem(10) rem(20);
+    margin-top: rem(24);
+  }
+  &__logo > img {
+    max-width: rem(176);
+
+    @include breakpoint-down(medium) {
+      max-width: rem(100);
+    }
+  }
+
+  &__title {
+    max-width: rem(120);
+    color: $darkText;
+  }
+  &__score {
+    display: flex;
+    flex-direction: column;
+    background-color: $whiteColor;
+    padding: rem(9) rem(25);
+    border-radius: rem(10);
+    width: rem(149);
+
+    @include breakpoint-down(medium) {
+      width: rem(85);
+      padding: rem(5) rem(10);
+    }
+
+    &--score {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      color: $scoreText;
+    }
+    .score {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      color: $darkText;
+    }
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  margin-top: rem(37);
+  height: 100%;
+  max-width: rem(700);
+  width: 100%;
+
+  .gameboard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    &.hide {
+      display: none;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url('/images/bg-triangle.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      z-index: -1;
+      height: rem(380);
+      width: 50%;
+    }
+    &__game {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      width: rem(706);
+      @include breakpoint-down(medium) {
+        width: rem(539);
+      }
+      @include breakpoint-down(small) {
+        width: rem(450);
+      }
+      &.hide {
+        display: none;
+      }
+    }
+  }
+}
+
+.gameboard__result {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: clamp(1.25rem, 7vw, 3.625rem);
+  padding: 0 rem(20);
+  max-width: rem(1070);
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: transform 1s ease, opacity 0.2s ease-in;
+  z-index: -1;
+
+  &.hide {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+  }
+
+  &--text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    opacity: 0;
+    transform: scale(0);
+    visibility: hidden;
+
+    @include breakpoint-down(small) {
+      top: 126%;
+      left: 50%;
+    }
+    &.show {
+      opacity: 1;
+      transform: scale(1) translate(-50%, -50%);
+      visibility: visible;
+      transition: all 0.8s ease;
+      transition-delay: 1s;
+    }
+  }
+  .result-text {
+    font-size: clamp(1.875rem, 5vw, 3.125rem);
+    color: $whiteColor;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: rem(20);
+  }
+}

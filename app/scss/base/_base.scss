@@ -1,0 +1,74 @@
+// @use '../abstracts/' as *;
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: $font-barlow;
+  background: $radialGradient;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+ol,
+ul {
+  list-style: none;
+}
+img {
+  border-style: none;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+button,
+input {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+footer {
+  padding: rem(10) rem(50);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  @include breakpoint-down(small) {
+    flex-direction: column-reverse;
+    padding-top: rem(32);
+  }
+}
+main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: rem(532);
+}
