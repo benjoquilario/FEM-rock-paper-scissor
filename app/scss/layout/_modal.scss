@@ -14,7 +14,7 @@
   background-color: rgba(0, 0, 0, 0.4);
   opacity: 0;
   transition: transform 0.5s ease-in-out;
-  padding: 0 rem(10);
+  padding: 0 rem(6);
 
   &.show-modal {
     transform: translate(0);
@@ -27,7 +27,7 @@
   flex-direction: column;
   background-color: #fff;
   border-radius: rem(10);
-  padding: rem(48);
+  padding: rem(48) rem(32);
 
   &__top {
     display: flex;
