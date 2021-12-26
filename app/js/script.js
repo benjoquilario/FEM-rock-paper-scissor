@@ -1,6 +1,6 @@
-const mainGarm = () => {
+const mainGame = function() {
   /*----- Modal Open --*/
-  const modal = () => {
+  const modal = function() {
     const modalContainer = document.querySelector('.modal-container');
     const modalOpen = document.querySelector('.btn--rules');
     const modalClose = document.querySelector('.btn--modalClose');
@@ -10,7 +10,7 @@ const mainGarm = () => {
       document.querySelector('body').style.overflow = 'hidden';
     });
 
-    function closeModal() {
+    const closeModal = function() {
       modalContainer.classList.remove('show-modal');
       document.querySelector('body').style.overflowY = 'scroll';
     }
@@ -37,7 +37,7 @@ const mainGarm = () => {
   let userChoice = undefined;
   let score = 0;
 
-  const initGame = () => {
+  const initGame = function() {
     pickButton.forEach((btn) => {
       btn.addEventListener('click', function () {
         const scoreElement = document.querySelector('.score');
@@ -53,7 +53,7 @@ const mainGarm = () => {
         computerPick.style.animation = 'colorChange 0.2s ease infinite';
         playerPick.style.animation = 'waving 2s ease';
         displayChoose.classList.add('show');
-        setTimeout(() => {
+        setTimeout(function() {
           computerPick.style.animation = 'none';
         }, timeOut);
 
@@ -65,29 +65,29 @@ const mainGarm = () => {
 
         console.log(userChoice);
         console.log(computerChoice);
-        const winner = () => {
+        const winner = function() {
           score++;
-          setTimeout(() => {
+          setTimeout(function() {
             scoreElement.textContent = score;
           }, timeOut);
-          setTimeout(() => {
+          setTimeout(function() {
             computerPick.classList.remove('winnerShadow');
             playerPick.classList.add('winnerShadow');
           }, shadowTime);
         };
-        const lose = () => {
+        const lose = function(){
           if (score != 0) {
             score--;
           }
-          setTimeout(() => {
+          setTimeout(function() {
             scoreElement.textContent = score;
           }, timeOut);
-          setTimeout(() => {
+          setTimeout(function() {
             computerPick.classList.add('winnerShadow');
             playerPick.classList.remove('winnerShadow');
           }, shadowTime);
         };
-        const chooseImg = (type) => {
+        const chooseImg = function(type) {
           switch (type) {
             case 'paper':
               return '<img class="choices-icon" src="./images/icon-paper.svg" alt="paper" />';
@@ -97,14 +97,14 @@ const mainGarm = () => {
               return '<img class="choices-icon" src="./images/icon-scissors.svg" alt="scissor"/>';
           }
         };
-        function playerChange() {
+        const playerChange = function() {
           playerPick.innerHTML = chooseImg(`${userChoice}`);
           playerPick.setAttribute('data-type', `${userChoice}`);
           playerPick.setAttribute('data-choice', `${userChoice}`);
           playerPick.setAttribute('aria-label', `choose ${userChoice}`);
         }
-        function housePickChange() {
-          setTimeout(() => {
+        const housePickChange = function() {
+          setTimeout(function() {
             computerPick.innerHTML = chooseImg(`${computerChoice}`);
             computerPick.setAttribute('data-type', `${computerChoice}`);
             computerPick.setAttribute('data-choice', `${computerChoice}`);
@@ -150,7 +150,7 @@ const mainGarm = () => {
       });
     });
   };
-  const reset = () => {
+  const reset = function() {
     btnReset.addEventListener('click', () => {
       playerPick.classList.remove('btn--scissor');
       playerPick.classList.remove('btn--rock');
@@ -173,4 +173,4 @@ const mainGarm = () => {
   modal();
 };
 
-mainGarm();
+mainGame();
